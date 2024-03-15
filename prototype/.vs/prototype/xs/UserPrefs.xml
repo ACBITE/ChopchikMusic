@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{C76D4977-436A-47AE-B657-E9143869B860}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/HomeController.cs">
+    <Files>
+      <File FileName="Program.cs" />
+      <File FileName="Controllers/HomeController.cs" Line="25" Column="1" />
+      <File FileName="Models/ErrorViewModel.cs" />
+      <File FileName="../prototype.Domain/Entity/User.cs" />
+      <File FileName="../prototype.Persistence/Implementation/UserRepository.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="prototype" expanded="True">
+            <Node name="prototype" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+            </Node>
+            <Node name="prototype.Domain" expanded="True">
+              <Node name="Entity" expanded="True" />
+            </Node>
+            <Node name="prototype.Persistence" expanded="True">
+              <Node name="Implementation" expanded="True" />
+            </Node>
+            <Node name="prototype.Service" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.prototype PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

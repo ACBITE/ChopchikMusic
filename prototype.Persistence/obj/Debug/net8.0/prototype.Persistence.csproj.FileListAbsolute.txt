@@ -1,0 +1,4 @@
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/obj/Debug/net8.0/prototype.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/obj/Debug/net8.0/prototype.Persistence.AssemblyInfoInputs.cache
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/obj/Debug/net8.0/prototype.Persistence.AssemblyInfo.cs
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/obj/Debug/net8.0/prototype.Persistence.csproj.CoreCompileInputs.cache

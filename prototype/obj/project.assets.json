@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "prototype.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/prototype.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/prototype.Domain.dll": {}
+        }
+      },
+      "prototype.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "prototype.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/prototype.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/prototype.Persistence.dll": {}
+        }
+      },
+      "prototype.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/prototype.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/prototype.Service.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "prototype.Domain/1.0.0": {
+      "type": "project",
+      "path": "../prototype.Domain/prototype.Domain.csproj",
+      "msbuildProject": "../prototype.Domain/prototype.Domain.csproj"
+    },
+    "prototype.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../prototype.Persistence/prototype.Persistence.csproj",
+      "msbuildProject": "../prototype.Persistence/prototype.Persistence.csproj"
+    },
+    "prototype.Service/1.0.0": {
+      "type": "project",
+      "path": "../prototype.Service/prototype.Service.csproj",
+      "msbuildProject": "../prototype.Service/prototype.Service.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "prototype.Domain >= 1.0.0",
+      "prototype.Persistence >= 1.0.0",
+      "prototype.Service >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/rinatbaitasov/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/prototype.csproj",
+      "projectName": "prototype",
+      "projectPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/prototype.csproj",
+      "packagesPath": "/Users/rinatbaitasov/.nuget/packages/",
+      "outputPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/rinatbaitasov/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/prototype.Domain.csproj": {
+              "projectPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/prototype.Domain.csproj"
+            },
+            "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/prototype.Persistence.csproj": {
+              "projectPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/prototype.Persistence.csproj"
+            },
+            "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Service/prototype.Service.csproj": {
+              "projectPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Service/prototype.Service.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
