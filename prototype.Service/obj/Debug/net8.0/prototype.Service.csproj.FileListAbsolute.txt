@@ -9,3 +9,4 @@
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Service/obj/Debug/net8.0/refint/prototype.Service.dll
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Service/obj/Debug/net8.0/prototype.Service.pdb
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Service/obj/Debug/net8.0/ref/prototype.Service.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Service/obj/Debug/net8.0/prototype.Service.sourcelink.json

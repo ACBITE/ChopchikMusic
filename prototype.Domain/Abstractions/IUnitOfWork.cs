@@ -7,7 +7,7 @@ namespace prototype.Domain.Abstractions
     public interface IUnitOfWork
     {
         IRepository<User> UserRepository { get; }
-        IRepository<Album> AlbumRespotiroy { get; }
+        IRepository<Album> AlbumRepository { get; }
         IRepository<AlbumAuthor> AlbumAuthorRepository { get; }
         IRepository<Author> AuthorRepository { get; }
         IRepository<Genre> GenreRepository { get; }

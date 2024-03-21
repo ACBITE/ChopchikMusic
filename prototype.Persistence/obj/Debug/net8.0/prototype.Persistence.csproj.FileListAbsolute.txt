@@ -13,3 +13,4 @@
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/obj/Debug/net8.0/refint/prototype.Persistence.dll
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/obj/Debug/net8.0/prototype.Persistence.pdb
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/obj/Debug/net8.0/ref/prototype.Persistence.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/obj/Debug/net8.0/prototype.Persistence.sourcelink.json
