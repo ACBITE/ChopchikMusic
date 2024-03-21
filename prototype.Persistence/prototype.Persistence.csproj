@@ -7,14 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Interfaces\" />
-    <None Remove="Implementation\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Implementation\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\prototype.Domain\prototype.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
   </ItemGroup>
 </Project>

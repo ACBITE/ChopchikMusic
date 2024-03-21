@@ -7,14 +7,52 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "prototype/1.0.0": {
+        "dependencies": {
+          "prototype.Domain": "1.0.0",
+          "prototype.Persistence": "1.0.0",
+          "prototype.Service": "1.0.0"
+        },
         "runtime": {
           "prototype.dll": {}
+        }
+      },
+      "prototype.Domain/1.0.0": {
+        "runtime": {
+          "prototype.Domain.dll": {}
+        }
+      },
+      "prototype.Persistence/1.0.0": {
+        "dependencies": {
+          "prototype.Domain": "1.0.0"
+        },
+        "runtime": {
+          "prototype.Persistence.dll": {}
+        }
+      },
+      "prototype.Service/1.0.0": {
+        "runtime": {
+          "prototype.Service.dll": {}
         }
       }
     }
   },
   "libraries": {
     "prototype/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "prototype.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "prototype.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "prototype.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

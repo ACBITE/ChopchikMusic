@@ -18,12 +18,7 @@ namespace prototype.Domain.Entities
 			Email = email;
 			PathToImage = pathToImage;
 			FavouritePlaylistId = favouritePlaylistId;
-		}
-
-		public ChangeName(string name)
-		{
-			Name = name;
-		}
+		}		
 
 	}
 }

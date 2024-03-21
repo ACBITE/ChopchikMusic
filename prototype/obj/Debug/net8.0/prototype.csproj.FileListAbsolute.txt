@@ -28,3 +28,11 @@
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/obj/Debug/net8.0/prototype.pdb
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/obj/Debug/net8.0/prototype.genruntimeconfig.cache
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/obj/Debug/net8.0/ref/prototype.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/prototype.Domain.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/prototype.Persistence.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/prototype.Service.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/prototype.Service.pdb
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/prototype.Persistence.pdb
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/prototype.Domain.pdb
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/obj/Debug/net8.0/prototype.csproj.AssemblyReference.cache
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/obj/Debug/net8.0/prototype.csproj.CopyComplete
