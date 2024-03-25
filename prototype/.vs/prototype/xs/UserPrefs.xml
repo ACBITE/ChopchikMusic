@@ -1,43 +1,56 @@
 ﻿<Properties StartupConfiguration="{C76D4977-436A-47AE-B657-E9143869B860}|https">
-  <MonoDevelop.Ide.ItemProperties.prototype PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../prototype.Persistence/Data/AppDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" />
+      <File FileName="Program.cs" Line="10" Column="1" />
       <File FileName="Controllers/HomeController.cs" />
       <File FileName="Models/ErrorViewModel.cs" />
-      <File FileName="../prototype.Domain/Entities/Entity.cs" />
-      <File FileName="../prototype.Domain/Entities/Song.cs" />
-      <File FileName="../prototype.Domain/Entities/Genre.cs" />
-      <File FileName="../prototype.Domain/Entities/Author.cs" />
-      <File FileName="../prototype.Domain/Entities/Playlist.cs" />
-      <File FileName="../prototype.Domain/Entities/Album.cs" />
-      <File FileName="../prototype.Domain/Entities/UserFavouriteSong.cs" />
-      <File FileName="../prototype.Domain/Entities/UserFavouriteAuthor.cs" />
-      <File FileName="../prototype.Domain/Entities/PlaylistUser.cs" />
-      <File FileName="../prototype.Domain/Entities/UserFavouriteGenres.cs" />
-      <File FileName="../prototype.Domain/Entities/SongAuthor.cs" />
-      <File FileName="../prototype.Domain/Entities/AlbumAuthor.cs" />
-      <File FileName="../prototype.Domain/Entities/PlaylistSong.cs" />
+      <File FileName="../prototype.Domain/Entities/Entity.cs" Line="1" Column="1" />
+      <File FileName="../prototype.Domain/Entities/Song.cs" Line="12" Column="16" />
+      <File FileName="../prototype.Domain/Entities/Genre.cs" Line="6" Column="29" />
+      <File FileName="../prototype.Domain/Entities/Author.cs" Line="6" Column="29" />
+      <File FileName="../prototype.Domain/Entities/Playlist.cs" Line="6" Column="29" />
+      <File FileName="../prototype.Domain/Entities/Album.cs" Line="9" Column="22" />
+      <File FileName="../prototype.Domain/Entities/UserFavouriteSong.cs" Line="10" Column="32" />
+      <File FileName="../prototype.Domain/Entities/UserFavouriteAuthor.cs" Line="10" Column="36" />
+      <File FileName="../prototype.Domain/Entities/PlaylistUser.cs" Line="10" Column="42" />
+      <File FileName="../prototype.Domain/Entities/UserFavouriteGenres.cs" Line="10" Column="34" />
+      <File FileName="../prototype.Domain/Entities/SongAuthor.cs" Line="10" Column="17" />
+      <File FileName="../prototype.Domain/Entities/AlbumAuthor.cs" Line="10" Column="38" />
+      <File FileName="../prototype.Domain/Entities/PlaylistSong.cs" Line="10" Column="32" />
       <File FileName="../prototype.Domain/Abstractions/IRepository.cs" />
       <File FileName="../prototype.Domain/Abstractions/IUnitOfWork.cs" />
-      <File FileName="../prototype.Persistence/Data/AppDbContext.cs" Line="36" Column="34" />
+      <File FileName="../prototype.Persistence/Data/AppDbContext.cs" Line="38" Column="1" />
+      <File FileName="../prototype.Persistence/Repository/EfRepository.cs" Line="23" Column="14" />
+      <File FileName="../prototype.Persistence/Repository/EfUnitOfWork.cs" Line="24" Column="45" />
+      <File FileName="../prototype.Domain/Entities/User.cs" Line="10" Column="43" />
+      <File FileName="../prototype.Persistence/DependencyInjection.cs" Line="23" Column="42" />
+      <File FileName="../prototype.Persistence/GlobalUsing.cs" Line="2" Column="23" />
+      <File FileName="GlobalUsing.cs" Line="3" Column="14" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="../prototype.Service/DbInitializer.cs" Line="11" Column="1" />
+      <File FileName="../prototype.Service/GlobalUsing.cs" Line="2" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="prototype">
-            <Node name="prototype.Domain" expanded="True">
-              <Node name="Entities" expanded="True" />
+          <Node name="prototype" expanded="True">
+            <Node name="prototype">
+              <Node name="GlobalUsing.cs" selected="True" />
+            </Node>
+            <Node name="prototype.Persistence" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Repository" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.prototype PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

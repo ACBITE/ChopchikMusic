@@ -10,3 +10,4 @@
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/obj/Debug/net8.0/prototype.Domain.pdb
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/obj/Debug/net8.0/ref/prototype.Domain.dll
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/obj/Debug/net8.0/prototype.Domain.sourcelink.json
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/obj/Debug/net8.0/prototype.Domain.csproj.AssemblyReference.cache

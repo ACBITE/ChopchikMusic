@@ -31,10 +31,11 @@ namespace prototype.Persistence.Data
             Database.EnsureCreated();
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            
-        }
+   //     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+   //     {
+			//optionsBuilder.UseNpgsql("Host=localhost;Port=5433;Database=musictest;Username=postgres;Password=1234");
+   //     }
+
 
     }
 }

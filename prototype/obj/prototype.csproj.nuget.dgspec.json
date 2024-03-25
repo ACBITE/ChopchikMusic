@@ -38,6 +38,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -100,6 +106,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -144,7 +154,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/prototype.Domain.csproj": {
+                "projectPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/prototype.Domain.csproj"
+              },
+              "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/prototype.Persistence.csproj": {
+                "projectPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/prototype.Persistence.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -220,6 +237,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

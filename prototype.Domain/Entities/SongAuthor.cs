@@ -3,13 +3,11 @@ namespace prototype.Domain.Entities
 {
 	public class SongAuthor : Entity
 	{
-		public int SongId { get; private set; }
-		public int AuthorId { get; private set; }
-		public SongAuthor(int songId, int authorId)
-		{
-			SongId = songId;
-			AuthorId = authorId;
-		}
+		public int? SongId { get;  set; }
+		public Song? Song { get; set; }
+
+		public int? AuthorId { get; set; }
+		public Author? Author { get; set; }
 	}
 }
 
