@@ -23,8 +23,21 @@ namespace prototype.Service
                 Role = "Admin",
                 PathToImage = "Herman.jpg"
             };
-
             await unitOfWork.UserRepository.AddAsync(user);
+
+            user = new User()
+            {
+                Id = 2,
+                Name = "Rinat",
+                Email = "bajtasovrinat@gmail.com",
+                Password = "1111",
+                Role = "User",
+                PathToImage = "Herman.jpg"
+            };
+            await unitOfWork.UserRepository.AddAsync(user);
+            ///Add the users - end
+
+                        
 
             await unitOfWork.SaveAllAsync();
         }

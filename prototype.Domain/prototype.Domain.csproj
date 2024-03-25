@@ -9,10 +9,12 @@
   <ItemGroup>
     <None Remove="Entities\" />
     <None Remove="Abstractions\" />
+    <None Remove="Response\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Abstractions\" />
+    <Folder Include="Response\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
