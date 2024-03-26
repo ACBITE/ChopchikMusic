@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using prototype.Persistence.Data;
 using prototype.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using prototype.Domain.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +11,21 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var options = new DbContextOptionsBuilder<AppDbContext>().UseNpgsql("Host=localhost;Port=5433;Database=musictest;Username=postgres;Password=1234").Options;
 builder.Services.AddPersistence(options);
-
+builder.Services.AddSingleton<UserServices>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidIssuer = AuthOptions.ISSUER,
+        ValidateAudience = true,
+        ValidAudience = AuthOptions.AUDIENCE,
+        ValidateLifetime = true,
+        IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
+        ValidateIssuerSigningKey = true
+    };
+});
 
 var app = builder.Build();
 
@@ -28,10 +45,10 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",

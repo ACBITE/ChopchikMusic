@@ -42,3 +42,11 @@
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Npgsql.dll
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/obj/Debug/net8.0/prototype.sourcelink.json
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

@@ -17,7 +17,27 @@ namespace prototype.Service
 		{
 			try
 			{
-				var user = await _unitOfWork.UserRepository.ListAsync();
+				var users = await _unitOfWork.UserRepository.ListAllAsync();
+				foreach (var user in users)
+				{
+					if (user.Name==name)
+					{
+						if (user.Password==password)
+						{
+							var result = AuthenticateService.Authenticate(user);
+							return new BaseResponse<ClaimsIdentity>()
+							{
+								Data = result,
+								StatusCode = 200
+							};
+                        }
+					}
+				}
+				return new BaseResponse<ClaimsIdentity>()
+				{
+					Description = "Неверный логин или пароль",
+					StatusCode = 400
+				};
 			}
 			catch (Exception ex)
 			{

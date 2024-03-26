@@ -1,21 +1,22 @@
-﻿<Properties StartupConfiguration="{C76D4977-436A-47AE-B657-E9143869B860}|https">
-  <MultiItemStartupConfigurations />
+﻿<Properties StartupConfiguration="{C76D4977-436A-47AE-B657-E9143869B860}|http">
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.prototype PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../prototype.Service/UserServices.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../prototype.Domain/Response/BaseResponse.cs">
     <Files>
-      <File FileName="Program.cs" Line="13" Column="27" />
-      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Program.cs" Line="52" Column="25" />
+      <File FileName="Controllers/HomeController.cs" Line="37" Column="45" />
       <File FileName="Models/ErrorViewModel.cs" />
       <File FileName="../prototype.Domain/Entities/Entity.cs" />
       <File FileName="../prototype.Domain/Entities/Song.cs" />
       <File FileName="../prototype.Domain/Entities/Genre.cs" />
       <File FileName="../prototype.Domain/Entities/Author.cs" />
       <File FileName="../prototype.Domain/Entities/Playlist.cs" />
-      <File FileName="../prototype.Domain/Entities/Album.cs" Line="9" Column="34" />
+      <File FileName="../prototype.Domain/Entities/Album.cs" />
       <File FileName="../prototype.Domain/Entities/UserFavouriteSong.cs" />
       <File FileName="../prototype.Domain/Entities/UserFavouriteAuthor.cs" />
       <File FileName="../prototype.Domain/Entities/PlaylistUser.cs" />
@@ -23,35 +24,40 @@
       <File FileName="../prototype.Domain/Entities/SongAuthor.cs" />
       <File FileName="../prototype.Domain/Entities/AlbumAuthor.cs" />
       <File FileName="../prototype.Domain/Entities/PlaylistSong.cs" />
-      <File FileName="../prototype.Domain/Abstractions/IRepository.cs" Line="12" Column="14" />
+      <File FileName="../prototype.Domain/Abstractions/IRepository.cs" />
       <File FileName="../prototype.Domain/Abstractions/IUnitOfWork.cs" />
-      <File FileName="../prototype.Persistence/Data/AppDbContext.cs" Line="36" Column="107" />
-      <File FileName="../prototype.Persistence/Repository/EfRepository.cs" Line="30" Column="1" />
-      <File FileName="../prototype.Persistence/Repository/EfUnitOfWork.cs" Line="24" Column="45" />
+      <File FileName="../prototype.Persistence/Data/AppDbContext.cs" />
+      <File FileName="../prototype.Persistence/Repository/EfRepository.cs" />
+      <File FileName="../prototype.Persistence/Repository/EfUnitOfWork.cs" />
       <File FileName="../prototype.Domain/Entities/User.cs" />
-      <File FileName="../prototype.Persistence/DependencyInjection.cs" Line="12" Column="18" />
-      <File FileName="../prototype.Persistence/GlobalUsing.cs" Line="3" Column="1" />
+      <File FileName="../prototype.Persistence/DependencyInjection.cs" />
+      <File FileName="../prototype.Persistence/GlobalUsing.cs" />
+      <File FileName="appsettings.json" />
+      <File FileName="../prototype.Service/DbInitializer.cs" />
+      <File FileName="../prototype.Service/GlobalUsing.cs" />
+      <File FileName="../prototype.Service/UserServices.cs" Line="16" Column="30" />
+      <File FileName="../prototype.Service/AuthenticateService.cs" />
+      <File FileName="../prototype.Service/DependencyInjection.cs" />
       <File FileName="GlobalUsing.cs" />
-      <File FileName="appsettings.json" Line="1" Column="1" />
-      <File FileName="../prototype.Service/DbInitializer.cs" Line="40" Column="13" />
-      <File FileName="../prototype.Service/GlobalUsing.cs" Line="2" Column="44" />
-      <File FileName="../prototype.Service/UserServices.cs" Line="20" Column="61" />
-      <File FileName="../prototype.Domain/BaseResponse.cs" Line="8" Column="28" />
+      <File FileName="../prototype.Domain/Response/BaseResponse.cs" Line="12" Column="1" />
+      <File FileName="../prototype.Domain/Jwt/AuthOptions.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="prototype">
+            <Node name="prototype">
+              <Node name="Controllers" expanded="True" />
+            </Node>
             <Node name="prototype.Domain">
-              <Node name="Response" expanded="True" />
+              <Node name="Response">
+                <Node name="BaseResponse.cs" selected="True" />
+              </Node>
             </Node>
-            <Node name="prototype.Service">
-              <Node name="UserServices.cs" selected="True" />
-            </Node>
+            <Node name="prototype.Service" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
