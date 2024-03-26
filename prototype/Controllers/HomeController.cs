@@ -45,22 +45,23 @@ public class HomeController : Controller
                 claims: result.Data.Claims,
                 expires: now.Add(TimeSpan.FromMinutes(AuthOptions.LIFETIME)),
                 signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
-            try
+        
+            var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
+            var response = new
             {
-                var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
-                var response = new
-                {
-                    access_token = encodedJwt,
-                    Role = result.Data.Name,
-                };
-                return Json(response);
-            }
-            catch (Exception ex)
-            {
-                return Json(ex.Message);
-            }
+                access_token = encodedJwt,
+                Role = result.Data.Name,
+            };
+            return Json(response);
+            
         }
         return BadRequest(new {errorText = "Invalid login or password."});
+    }
+
+    [HttpPut]
+    public async void Register(string login, string email, string password)
+    {
+        _userServices.Register(login, email, password);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

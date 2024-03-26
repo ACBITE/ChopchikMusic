@@ -48,6 +48,26 @@ namespace prototype.Service
 				};
 			}
 		}
+
+		public async void Register(string login, string email, string password)
+		{
+			try
+			{
+				var user = new User()
+				{
+					Name = login,
+					Email = email,
+					Password = password,
+					Role = "User",
+					PathToImage = "Herman.jpg"
+				};
+				await _unitOfWork.UserRepository.AddAsync(user);
+			}
+			catch (Exception ex)
+			{
+
+			}
+		}
 	}
 }
 
