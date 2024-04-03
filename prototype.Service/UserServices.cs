@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using System.Security.Claims;
 using prototype.Domain;
 
@@ -49,25 +50,39 @@ namespace prototype.Service
 			}
 		}
 
-		public async void Register(string login, string email, string password)
-		{
-			try
-			{
-				var user = new User()
-				{
-					Name = login,
-					Email = email,
-					Password = password,
-					Role = "User",
-					PathToImage = "Herman.jpg"
-				};
-				await _unitOfWork.UserRepository.AddAsync(user);
-			}
-			catch (Exception ex)
-			{
+		//public async Task<BaseResponse<ClaimsIdentity>> Register(string login, string email, string password)
+		//{
+		//	try
+		//	{
 
-			}
-		}
+
+		//		Expression<Func<User, bool>> filter = c => c.Name == login;
+		//		var users = await _unitOfWork.UserRepository.ListAsync(filter);
+		//		if (users.Count != 0)
+		//		{
+		//			return new BaseResponse<ClaimsIdentity>()
+		//			{
+		//				Description = "Такое имя уже существует",
+		//				StatusCode = 400
+		//			};
+		//		}
+		//		await _unitOfWork.UserRepository.AddAsync(user);				
+  //              var result = AuthenticateService.Authenticate(user);
+  //              return new BaseResponse<ClaimsIdentity>()
+  //              {
+  //                  Data = result,
+  //                  StatusCode = 200
+  //              };
+  //          }
+		//	catch (Exception ex)
+		//	{
+		//		return new BaseResponse<ClaimsIdentity>()
+		//		{
+		//			Description = ex.Message,
+		//			StatusCode = 500
+		//		};
+		//	}
+		//}
 	}
 }
 

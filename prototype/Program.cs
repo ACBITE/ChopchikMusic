@@ -10,8 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 var options = new DbContextOptionsBuilder<AppDbContext>().UseNpgsql("Host=localhost;Port=5433;Database=musictest;Username=postgres;Password=1234").Options;
-builder.Services.AddPersistence(options);
-builder.Services.AddSingleton<UserServices>();
+builder.Services.AddPersistence(options).AddApplication();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.RequireHttpsMetadata = false;

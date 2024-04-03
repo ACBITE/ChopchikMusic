@@ -8,6 +8,18 @@
 
   <ItemGroup>
     <ProjectReference Include="..\prototype.Domain\prototype.Domain.csproj" />
-    <ProjectReference Include="..\prototype.Persistence\prototype.Persistence.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="UserUseCases\" />
+    <None Remove="UserUseCases\Commands\" />
+    <None Remove="UserUseCases\Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserUseCases\" />
+    <Folder Include="UserUseCases\Commands\" />
+    <Folder Include="UserUseCases\Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
   </ItemGroup>
 </Project>

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "K8rJF/oAZPYVVf3eTqKzCOlRppxkGpsfrJgtSm0ioYqUGgD3FG6/ROhQtvW6Pk5nGPEcUe+QPsidZjhxVqtz7Q==",
+  "dgSpecHash": "ztc/jGgVSIzgQ/CA1y+x2w9lLgSO2qSpVF63DNimmNWqy07LMXsVYGvDHCTQNYUaO9U1mutP+wZb1PyZ69I+IA==",
   "success": true,
   "projectFilePath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype/prototype.csproj",
   "expectedPackageFiles": [
+    "/Users/rinatbaitasov/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/Users/rinatbaitasov/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/rinatbaitasov/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.3/microsoft.aspnetcore.authentication.jwtbearer.8.0.3.nupkg.sha512",
     "/Users/rinatbaitasov/.nuget/packages/microsoft.entityframeworkcore/8.0.3/microsoft.entityframeworkcore.8.0.3.nupkg.sha512",
     "/Users/rinatbaitasov/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.3/microsoft.entityframeworkcore.abstractions.8.0.3.nupkg.sha512",

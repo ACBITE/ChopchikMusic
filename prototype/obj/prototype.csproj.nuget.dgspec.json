@@ -161,9 +161,6 @@
             "projectReferences": {
               "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/prototype.Domain.csproj": {
                 "projectPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Domain/prototype.Domain.csproj"
-              },
-              "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/prototype.Persistence.csproj": {
-                "projectPath": "/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Persistence/prototype.Persistence.csproj"
               }
             }
           }
@@ -177,6 +174,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
