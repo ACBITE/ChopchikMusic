@@ -22,7 +22,7 @@ public class HomeController : Controller
         _mediator = mediator;
     }
 
-    [HttpPost]
+    [HttpGet]
     public async Task<IActionResult> Login(string login, string password)
     {    
         var result = await _mediator.Send(new GetUserByNameQuery(login, password));

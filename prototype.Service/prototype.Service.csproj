@@ -13,11 +13,21 @@
     <None Remove="UserUseCases\" />
     <None Remove="UserUseCases\Commands\" />
     <None Remove="UserUseCases\Queries\" />
+    <None Remove="PlaylistUseCases\" />
+    <None Remove="PlaylistUseCases\Queries\" />
+    <None Remove="PlaylistUseCases\Commands\" />
+    <None Remove="SongUseCases\" />
+    <None Remove="SongUseCases\Queries\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UserUseCases\" />
     <Folder Include="UserUseCases\Commands\" />
     <Folder Include="UserUseCases\Queries\" />
+    <Folder Include="PlaylistUseCases\" />
+    <Folder Include="PlaylistUseCases\Queries\" />
+    <Folder Include="PlaylistUseCases\Commands\" />
+    <Folder Include="SongUseCases\" />
+    <Folder Include="SongUseCases\Queries\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.2.0" />
