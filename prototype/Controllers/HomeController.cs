@@ -15,23 +15,11 @@ namespace prototype.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
     private readonly IMediator _mediator;
 
     public HomeController(IMediator mediator)
     {
         _mediator = mediator;
-    }
-
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
     }
 
     [HttpPost]
@@ -63,7 +51,6 @@ public class HomeController : Controller
     [HttpPut]
     public async Task<IActionResult> Register(string login, string email, string password)
     {
-        string chopchik = "";
         var result = await _mediator.Send(new AddUserCommand(login, email, password, "User", "Herman.jpg"));        
         if (result.StatusCode == 200)
         {
@@ -85,15 +72,7 @@ public class HomeController : Controller
             return Json(response);
         }
         else return BadRequest(result.Description);        
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-
-  
+    }  
 
 }
 
