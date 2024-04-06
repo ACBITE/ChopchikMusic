@@ -20,7 +20,7 @@ namespace prototype.Service
             user = new User("Rinat", "rinat@puk.puk", "1111", "User", "Herman.jpg");
             await unitOfWork.UserRepository.AddAsync(user);
 
-            var playlist = new Playlist("Test", "Herman.jpg");
+            var playlist = new Playlist("Test", "Herman.jpg", 2, user);
             await unitOfWork.PlaylistRepository.AddAsync(playlist);
 
             var playlistUser = new PlaylistUser(2, user, 1, playlist);
