@@ -5,6 +5,8 @@ namespace prototype.Domain.Entities
 	{
 		public string Name { get; set; }
 		public string PathToImage { get; set; }
+		public int UserId { get; set; }
+		public User User { get; set; }
 
 		public Playlist()
 		{
@@ -12,10 +14,12 @@ namespace prototype.Domain.Entities
 			PathToImage = "";
 		}
 
-		public Playlist(string name, string path)
+		public Playlist(string name, string path, int userId, User user)
 		{
 			Name = name;
 			PathToImage = path;
+			UserId = userId;
+			User = user;
 		}
 
 	}

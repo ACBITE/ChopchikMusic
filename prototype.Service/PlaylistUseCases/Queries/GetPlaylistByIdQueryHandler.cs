@@ -21,8 +21,7 @@ namespace prototype.Service.PlaylistUseCases.Queries
                 List<Playlist> playlists = new List<Playlist>();
                 foreach (var playlistUser in playlistUsers)
                 {
-                    var playlist = await _unitOfWork.PlaylistRepository.GetByIdAsync(playlistUser.PlaylistId);
-                    playlists.Add(playlist);
+                    playlists.Add(playlistUser.Playlist);                    
                 }
                 return new BaseResponse<IEnumerable<Playlist>>()
                 {

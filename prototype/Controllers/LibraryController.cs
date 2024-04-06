@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using prototype.Service.PlaylistUseCases.Queries;
+using prototype.Service.SongUseCases.Queries;
 
 namespace prototype.Controllers
 {
@@ -31,7 +32,21 @@ namespace prototype.Controllers
         [HttpGet]
         public async Task<IActionResult> GetSongsByPlaylist(int id)
         {
-            var result = await _mediator.Send(new GetSongByIdQuery(id));
+            var result = await _mediator.Send(new GetSongByPlaylistIdQuery(id));
+            if (result.StatusCode == 200)
+            {
+                return Json(result.Data);
+            }
+            else
+            {
+                return BadRequest(result.Description);
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetFavouriteSongs(int id)
+        {
+            var result = await _mediator.Send(new GetFavouriteSongsByUserId(id));
             if (result.StatusCode == 200)
             {
                 return Json(result.Data);
