@@ -9,10 +9,10 @@ namespace prototype.Service
 		{
 			var claims = new List<Claim>
 			{
-				new Claim(ClaimsIdentity.DefaultNameClaimType, user.Name),
-				new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role)
-			};
-            return new(claims, "Token", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
+                new Claim(ClaimsIdentity.DefaultNameClaimType, user.Name),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+            };
+            return new(claims, "token", ClaimsIdentity.DefaultNameClaimType, ClaimTypes.NameIdentifier);
         }
     }
 }

@@ -3,6 +3,7 @@ using prototype.Persistence.Data;
 using prototype.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Cors;
 using prototype.Domain.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +27,18 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+            builder =>
+            {
+                builder
+                    .AllowAnyOrigin() // Разрешить любой источник
+                    .AllowAnyMethod() // Разрешить любой метод
+                    .AllowAnyHeader(); // Разрешить любые заголовки
+            });
+});
+
 var app = builder.Build();
 
 
@@ -45,7 +58,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
+app.UseCors("AllowAllOrigins");
 app.UseAuthorization();
 app.UseAuthentication();
 

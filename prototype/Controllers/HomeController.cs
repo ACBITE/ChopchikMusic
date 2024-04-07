@@ -1,13 +1,9 @@
-﻿using System.Diagnostics;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using prototype.Domain.Abstractions;
 using prototype.Domain.Jwt;
-using prototype.Models;
-using prototype.Persistence.Repository;
-using prototype.Service;
 using prototype.Service.UserUseCases.Commands;
 using prototype.Service.UserUseCases.Queries;
 
@@ -38,10 +34,12 @@ public class HomeController : Controller
                 signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
 
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
+            var userId = result.Data.FindFirst(ClaimTypes.NameIdentifier);
             var response = new
             {
                 access_token = encodedJwt,
-                Role = result.Data.Name,
+                Name = result.Data.Name,
+                userId = userId.Value
             };
             return Json(response);
         }
@@ -64,10 +62,12 @@ public class HomeController : Controller
                 signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
 
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
+            var userId = result.Data.FindFirst(ClaimTypes.NameIdentifier);
             var response = new
             {
                 access_token = encodedJwt,
-                Role = result.Data.Name,
+                Name = result.Data.Name,
+                userId = userId.Value
             };
             return Json(response);
         }
