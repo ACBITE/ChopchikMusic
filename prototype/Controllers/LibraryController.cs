@@ -1,5 +1,4 @@
-﻿using System;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using prototype.Service.PlaylistUseCases.Queries;
 using prototype.Service.SongUseCases.Queries;
@@ -55,6 +54,22 @@ namespace prototype.Controllers
             {
                 return BadRequest(result.Description);
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAudio(string pathToSong)
+        {
+            pathToSong = "/Users/rinatbaitasov/Rinat/Univers/OOP/Music/" + pathToSong;
+            var fileStream = new FileStream(pathToSong, FileMode.Open, FileAccess.Read);    
+            return new FileStreamResult(fileStream, "audio/mpeg");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetImage(string pathToImage)
+        {
+            pathToImage = "/Users/rinatbaitasov/Rinat/Univers/OOP/Image/" + pathToImage;
+            var fileStream = new FileStream(pathToImage, FileMode.Open, FileAccess.Read);
+            return new FileStreamResult(fileStream, "image/jpg");
         }
 
     }

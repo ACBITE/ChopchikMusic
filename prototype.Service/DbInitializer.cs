@@ -26,7 +26,9 @@ namespace prototype.Service
             var playlistUser = new PlaylistUser(2, user, 1, playlist);
             await unitOfWork.PlaylistUserRepository.AddAsync(playlistUser);
 
-            var author = new Author("Nirvana", "Herman.jpg");
+            ///========================================================Nevermind
+
+            var author = new Author("Nirvana", "Nirvana.jpg");
             await unitOfWork.AuthorRepository.AddAsync(author);
 
             var genre = new Genre("Rock");
@@ -47,39 +49,35 @@ namespace prototype.Service
             var playlistSong = new PlaylistSong(1, playlist, 1, song);
             await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);
 
-            //user = new User()
-            //{
-            //    Id = 2,
-            //    Name = "Rinat",
-            //    Email = "bajtasovrinat@gmail.com",
-            //    Password = "1111",
-            //    Role = "User",
-            //    PathToImage = "Herman.jpg"
-            //};
-            //await unitOfWork.UserRepository.AddAsync(user);
-            /////Add the users - end
+            ///========================================================три дня дождя
 
-            //user = new User()
-            //{
-            //    Id = 3,
-            //    Name = "Rinat1",
-            //    Email = "bajtasovrinat@gmail.com",
-            //    Password = "1111",
-            //    Role = "User",
-            //    PathToImage = "Herman.jpg"
-            //};
-            //await unitOfWork.UserRepository.AddAsync(user);
+            author = new Author("Три дня дождя", "tdd.jpg");
+            await unitOfWork.AuthorRepository.AddAsync(author);
 
-            //user = new User()
-            //{
-            //    Id = 4,
-            //    Name = "Rinat2",
-            //    Email = "bajtasovrinat@gmail.com",
-            //    Password = "1111",
-            //    Role = "User",
-            //    PathToImage = "Herman.jpg"
-            //};
-            //await unitOfWork.UserRepository.AddAsync(user);
+            album = new Album("Байполар", "baipolar.jpg", 1, genre);
+            await unitOfWork.AlbumRepository.AddAsync(album);
+
+            albumAuthor = new AlbumAuthor(2, album, 2, author);
+            await unitOfWork.AlbumAuthorRepository.AddAsync(albumAuthor);
+
+            song = new Song("Слезы на ветер", "baipolar.jpg", "slezynaveter.mp3", 2, album);
+            await unitOfWork.SongRepository.AddAsync(song);
+
+            songAuthor = new SongAuthor(2, song, 2, author);
+            await unitOfWork.SongAuthorRepository.AddAsync(songAuthor);
+
+            playlistSong = new PlaylistSong(1, playlist, 2, song);
+            await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);
+
+
+            song = new Song("Не виноваты планеты", "baipolar.jpg", "planety.mp3", 2, album);
+            await unitOfWork.SongRepository.AddAsync(song);
+
+            songAuthor = new SongAuthor(3, song, 2, author);
+            await unitOfWork.SongAuthorRepository.AddAsync(songAuthor);
+
+            playlistSong = new PlaylistSong(1, playlist, 3, song);
+            await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);
 
 
             await unitOfWork.SaveAllAsync();
