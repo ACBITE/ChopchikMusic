@@ -79,6 +79,14 @@ namespace prototype.Service
             playlistSong = new PlaylistSong(1, playlist, 3, song);
             await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);
 
+            playlist = new Playlist("Test2", "Herman.jpg", 2, user);
+            await unitOfWork.PlaylistRepository.AddAsync(playlist);
+
+            playlistUser = new PlaylistUser(2, user, 2, playlist);
+            await unitOfWork.PlaylistUserRepository.AddAsync(playlistUser);
+
+            var favouritesongs = new UserFavouriteSong(3, song, 2, user);
+            await unitOfWork.UserFavouriteSongRepository.AddAsync(favouritesongs);
 
             await unitOfWork.SaveAllAsync();
         }
