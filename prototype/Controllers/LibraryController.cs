@@ -72,6 +72,20 @@ namespace prototype.Controllers
             return new FileStreamResult(fileStream, "image/jpg");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> FindSongByName(string name)
+        {
+            var result = await _mediator.Send(new GetSongsByNameQuery(name));
+            if (result.StatusCode==200)
+            {
+                return Json(result);
+            }
+            else
+            {
+                return BadRequest(result.Description);
+            }
+        }
+
     }
 }
 

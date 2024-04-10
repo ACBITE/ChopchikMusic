@@ -1,9 +1,13 @@
 ﻿<Properties StartupConfiguration="{C76D4977-436A-47AE-B657-E9143869B860}|http">
-  <MonoDevelop.Ide.ItemProperties.prototype PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LibraryController.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/rinatbaitasov/Rinat/Univers/OOP/Project/prototype.Service/UserUseCases/Queries/GetUserByNameQueryHandler.cs" relfile=".Service/UserUseCases/Queries/GetUserByNameQueryHandler.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/HomeController.cs">
     <Files>
       <File FileName="Program.cs" />
-      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Controllers/HomeController.cs" Line="17" Column="6" />
       <File FileName="Models/ErrorViewModel.cs" />
       <File FileName="../prototype.Domain/Entities/Entity.cs" />
       <File FileName="../prototype.Domain/Entities/Song.cs" />
@@ -22,11 +26,11 @@
       <File FileName="../prototype.Domain/Jwt/AuthOptions.cs" />
       <File FileName="../prototype.Service/UserUseCases/Commands/AddUserCommand.cs" />
       <File FileName="../prototype.Service/UserUseCases/Commands/AddUserCommandHandler.cs" />
-      <File FileName="../prototype.Service/UserUseCases/Queries/GetUserByNameQueryHandler.cs" />
-      <File FileName="Controllers/LibraryController.cs" Line="43" Column="10" />
+      <File FileName="../prototype.Service/UserUseCases/Queries/GetUserByNameQueryHandler.cs" Line="44" Column="1" />
+      <File FileName="Controllers/LibraryController.cs" Line="66" Column="1" />
       <File FileName="../prototype.Service/PlaylistUseCases/Queries/GetPlaylistByIdQuery.cs" />
       <File FileName="../prototype.Service/PlaylistUseCases/Queries/GetPlaylistByIdQueryHandler.cs" />
-      <File FileName="../prototype.Service/UserUseCases/Queries/GetUserByNameQuery.cs" />
+      <File FileName="../prototype.Service/UserUseCases/Queries/GetUserByNameQuery.cs" Line="11" Column="1" />
       <File FileName="../prototype.Service/SongUseCases/Queries/GetSongByPlaylistIdQueryHandler.cs" />
       <File FileName="../prototype.Service/SongUseCases/Queries/GetSongByPlaylistIdQuery.cs" />
       <File FileName="../prototype.Service/SongUseCases/Queries/GetFavouriteSongsByUserId.cs" />
@@ -48,7 +52,7 @@
       <File FileName="../prototype.Service/SongUseCases/Queries/GetSongsByAlbumIdCommandHandler.cs" />
       <File FileName="../prototype.Service/AlbumUseCases/Queries/GetAlbumsByAuthorQuery.cs" />
       <File FileName="../prototype.Service/AlbumUseCases/Queries/GetAlbumsByAuthorQueryHandler.cs" />
-      <File FileName="Properties/launchSettings.json" />
+      <File FileName="Properties/launchSettings.json" Line="14" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -56,10 +60,16 @@
           <Node name="prototype">
             <Node name="prototype">
               <Node name="Controllers" expanded="True">
-                <Node name="LibraryController.cs" selected="True" />
+                <Node name="HomeController.cs" selected="True" />
               </Node>
+              <Node name="Properties" expanded="True" />
             </Node>
             <Node name="prototype.Persistence" expanded="True" />
+            <Node name="prototype.Service" expanded="True">
+              <Node name="UserUseCases" expanded="True">
+                <Node name="Queries" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -67,8 +77,6 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.prototype PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
