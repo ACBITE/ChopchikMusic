@@ -49,6 +49,8 @@ namespace prototype.Service
             var playlistSong = new PlaylistSong(1, playlist, 1, song);
             await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);
 
+       
+
             ///========================================================три дня дождя
 
             author = new Author("Три дня дождя", "tdd.jpg");
@@ -79,14 +81,34 @@ namespace prototype.Service
             playlistSong = new PlaylistSong(1, playlist, 3, song);
             await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);
 
-            playlist = new Playlist("Test2", "Herman.jpg", 2, user);
-            await unitOfWork.PlaylistRepository.AddAsync(playlist);
+            //playlist = new Playlist("Test2", "Herman.jpg", 2, user);
+            //await unitOfWork.PlaylistRepository.AddAsync(playlist);
 
-            playlistUser = new PlaylistUser(2, user, 2, playlist);
-            await unitOfWork.PlaylistUserRepository.AddAsync(playlistUser);
+            //playlistUser = new PlaylistUser(2, user, 2, playlist);
+            //await unitOfWork.PlaylistUserRepository.AddAsync(playlistUser);
 
             var favouritesongs = new UserFavouriteSong(3, song, 2, user);
             await unitOfWork.UserFavouriteSongRepository.AddAsync(favouritesongs);
+
+            ///========================================================Chopchik
+
+            author = new Author("Дмитрий Чопиц", "Chopchik.jpg");
+            await unitOfWork.AuthorRepository.AddAsync(author);
+
+            album = new Album("Chopchik", "Chopchik.jpg", 1, genre);
+            await unitOfWork.AlbumRepository.AddAsync(album);
+
+            albumAuthor = new(3, album, 3, author);
+            await unitOfWork.AlbumAuthorRepository.AddAsync(albumAuthor);
+
+            song = new Song("Молодой Чопик", "Chopchik.jpg", "chopchik.mp3", 3, album);
+            await unitOfWork.SongRepository.AddAsync(song);
+
+            songAuthor = new SongAuthor(4, song, 3, author);
+            await unitOfWork.SongAuthorRepository.AddAsync(songAuthor);
+
+            playlistSong = new PlaylistSong(1, playlist, 4, song);
+            await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);
 
             await unitOfWork.SaveAllAsync();
         }

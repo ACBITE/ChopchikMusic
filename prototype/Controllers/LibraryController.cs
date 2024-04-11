@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using prototype.Service.PlaylistUseCases.Commands;
 using prototype.Service.PlaylistUseCases.Queries;
 using prototype.Service.SongUseCases.Queries;
 
@@ -42,6 +43,20 @@ namespace prototype.Controllers
             }
         }
 
+        [HttpPut]
+        public async Task<IActionResult> AddPlaylist(int userId, string name, string path = "/Users/rinatbaitasov/Rinat/Univers/OOP/Image/newPlaylist.jpg")
+        {
+            var result = await _mediator.Send(new AddPlaylistCommand(name, path, userId));
+            if (result.StatusCode==200)
+            {
+                return Json(result.Data);
+            }
+            else
+            {
+                return BadRequest(result.Description);
+            }
+        }
+        
         [HttpGet]
         public async Task<IActionResult> GetFavouriteSongs(int id)
         {
