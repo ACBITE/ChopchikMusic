@@ -44,7 +44,7 @@ namespace prototype.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> AddPlaylist(int userId, string name, string path = "/Users/rinatbaitasov/Rinat/Univers/OOP/Image/newPlaylist.jpg")
+        public async Task<IActionResult> AddPlaylist(int userId, string name, string path = "newPlaylist.jpg")
         {
             var result = await _mediator.Send(new AddPlaylistCommand(name, path, userId));
             if (result.StatusCode==200)
