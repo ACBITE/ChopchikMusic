@@ -8,8 +8,7 @@ namespace prototype.Domain.Abstractions
     {
         IRepository<User> UserRepository { get; }
         IRepository<Album> AlbumRepository { get; }
-        IRepository<AlbumAuthor> AlbumAuthorRepository { get; }
-        IRepository<Author> AuthorRepository { get; }
+        IRepository<AlbumAuthor> AlbumAuthorRepository { get; } 
         IRepository<Genre> GenreRepository { get; }
         IRepository<Playlist> PlaylistRepository { get; }
         IRepository<PlaylistSong> PlaylistSongRepository { get; }
@@ -23,6 +22,8 @@ namespace prototype.Domain.Abstractions
         public Task SaveAllAsync();
         public Task DeleteDataBaseAsync();
         public Task CreateDataBaseAsync();
+
+        public Task ConnectDataBaseAsync();
     }
 }
 

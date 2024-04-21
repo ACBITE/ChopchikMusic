@@ -11,7 +11,6 @@ namespace prototype.Persistence.Data
 		public DbSet<User> Users { get; set; }
 		public DbSet<Album> Albums { get; set; }
 		public DbSet<AlbumAuthor> AlbumAuthors { get; set; }
-		public DbSet<Author> Authors { get; set; }
 		public DbSet<Genre> Genres { get; set; }
 		public DbSet<Playlist> Playlists { get; set; }
 		public DbSet<PlaylistSong> PlaylistSongs { get; set; }

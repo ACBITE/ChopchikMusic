@@ -12,7 +12,7 @@ namespace prototype.Service
 
             await unitOfWork.DeleteDataBaseAsync();
             await unitOfWork.CreateDataBaseAsync();
-
+            //await unitOfWork.ConnectDataBaseAsync();
             ///Add the users
             var user = new User("Admin", "admin", "1234", "Admin", "Herman.jpg");
             await unitOfWork.UserRepository.AddAsync(user);
@@ -28,7 +28,7 @@ namespace prototype.Service
 
             ///========================================================Nevermind
 
-            var author = new Author("Nirvana", "Nirvana.jpg");
+            /*var author = new User("Nirvana", "Nirvana.jpg");
             await unitOfWork.AuthorRepository.AddAsync(author);
 
             var genre = new Genre("Rock");
@@ -108,7 +108,7 @@ namespace prototype.Service
             await unitOfWork.SongAuthorRepository.AddAsync(songAuthor);
 
             playlistSong = new PlaylistSong(1, playlist, 4, song);
-            await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);
+            await unitOfWork.PlaylistSongRepository.AddAsync(playlistSong);*/
 
             await unitOfWork.SaveAllAsync();
         }

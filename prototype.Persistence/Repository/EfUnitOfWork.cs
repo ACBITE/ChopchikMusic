@@ -15,7 +15,6 @@ namespace prototype.Persistence.Repository
         private readonly Lazy<IRepository<User>> _userRepository;
         private readonly Lazy<IRepository<Album>> _albumRepository;
         private readonly Lazy<IRepository<AlbumAuthor>> _albumAuthorRepository;
-        private readonly Lazy<IRepository<Author>> _authorRepository;
         private readonly Lazy<IRepository<Genre>> _genreRepository;
         private readonly Lazy<IRepository<Playlist>> _playlistRepository;
         private readonly Lazy<IRepository<PlaylistSong>> _playlistSongRepository;
@@ -31,8 +30,7 @@ namespace prototype.Persistence.Repository
             _context = context;
             _userRepository = new Lazy<IRepository<User>>(() => new EfRepository<User>(context));
             _albumRepository = new Lazy<IRepository<Album>>(() => new EfRepository<Album>(context));
-            _albumAuthorRepository = new Lazy<IRepository<AlbumAuthor>>(() => new EfRepository<AlbumAuthor>(context));
-            _authorRepository = new Lazy<IRepository<Author>>(() => new EfRepository<Author>(context));
+            _albumAuthorRepository = new Lazy<IRepository<AlbumAuthor>>(() => new EfRepository<AlbumAuthor>(context)); 
             _genreRepository = new Lazy<IRepository<Genre>>(() => new EfRepository<Genre>(context));
             _playlistRepository = new Lazy<IRepository<Playlist>>(() => new EfRepository<Playlist>(context));
             _playlistSongRepository = new Lazy<IRepository<PlaylistSong>>(() => new EfRepository<PlaylistSong>(context));
@@ -49,7 +47,6 @@ namespace prototype.Persistence.Repository
         public IRepository<User> UserRepository => _userRepository.Value;
         public IRepository<Album> AlbumRepository => _albumRepository.Value;
         public IRepository<AlbumAuthor> AlbumAuthorRepository => _albumAuthorRepository.Value;
-        public IRepository<Author> AuthorRepository => _authorRepository.Value;
         public IRepository<Genre> GenreRepository => _genreRepository.Value;
         public IRepository<Playlist> PlaylistRepository => _playlistRepository.Value;
         public IRepository<PlaylistSong> PlaylistSongRepository => _playlistSongRepository.Value;
@@ -63,6 +60,8 @@ namespace prototype.Persistence.Repository
         public async Task CreateDataBaseAsync() => await _context.Database.EnsureCreatedAsync();
         public async Task DeleteDataBaseAsync() => await _context.Database.EnsureDeletedAsync();
         public async Task SaveAllAsync() => await _context.SaveChangesAsync();
+
+        public async Task ConnectDataBaseAsync() => await _context.Database.CanConnectAsync();
     }
 }
 

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using prototype.Service.PlaylistUseCases.Commands;
 using prototype.Service.PlaylistUseCases.Queries;
+using prototype.Service.SongUseCases.Commands;
 using prototype.Service.SongUseCases.Queries;
 
 namespace prototype.Controllers
@@ -100,6 +101,33 @@ namespace prototype.Controllers
                 return BadRequest(result.Description);
             }
         }
+
+        [HttpPut]
+        public async Task<IActionResult> AddSongToFavouriteSongs(int userId, int songId) {
+            var result = await _mediator.Send(new AddFavouriteSongCommand(userId, songId));
+            if (result.StatusCode==200) {
+                return Json(result);
+            }
+            else {
+                return BadRequest(result.Description);
+            }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> AddSongToPlaylist(int playlistId, int songId) {
+            var result = await _mediator.Send(new AddSongToPlaylistCommand(playlistId, songId));
+            if (result.StatusCode==200) {
+                return Json(result);
+            }
+            else {
+                return BadRequest(result.Description);
+            }
+        }
+
+        // [HttpDelete]
+        // public async Task<IActionResult> DeletePlaylist(int id) {
+        //     var result = await _mediator.Send(new DeletePlaylistByIdCommand(id));
+        // }
 
     }
 }

@@ -7,17 +7,17 @@ namespace prototype.Domain.Entities
 		public User User { get; set; }
 
 		public int AuthorId { get; set; }
-		public Author Author { get; set; }
+		public User Author { get; set; }
 
 		public UserFavouriteAuthor()
 		{
 			UserId = 0;
 			AuthorId = 0;
 			User = new User();
-			Author = new Author();
+			Author = new User();
 		}
 
-		public UserFavouriteAuthor(int userId, User user, int authorId, Author author)
+		public UserFavouriteAuthor(int userId, User user, int authorId, User author)
 		{
 			UserId = userId;
 			User = user;
