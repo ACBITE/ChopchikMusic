@@ -20,8 +20,9 @@ namespace prototype.Service.SongUseCases.Queries
                 var playlistSongs = await _unitOfWork.PlaylistSongRepository.ListAsync(filter, cancellationToken);
                 List<Song> songs = new List<Song>();
                 foreach (var song in playlistSongs)
-                {                    
-                    songs.Add(song.Song);
+                {
+                    var _song = await _unitOfWork.SongRepository.GetByIdAsync(song.SongId);
+                    songs.Add(_song);
                 }
                 return new BaseResponse<IEnumerable<Song>>()
                 {

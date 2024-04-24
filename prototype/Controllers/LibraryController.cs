@@ -1,5 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using prototype.Service.AlbumUseCases.Commands;
+using prototype.Service.AlbumUseCases.Queries;
 using prototype.Service.PlaylistUseCases.Commands;
 using prototype.Service.PlaylistUseCases.Queries;
 using prototype.Service.SongUseCases.Commands;
@@ -14,6 +16,27 @@ namespace prototype.Controllers
         public LibraryController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UploadMusic(IFormFile musicFile, string authorName, string albumName, string songTitle) {
+
+            var result = await _mediator.Send(new AddSongCommand(songTitle, authorName, albumName, musicFile));
+            if (result.StatusCode==200) {
+                return Json(result.Description);
+            }
+            else return BadRequest(result.Description);
+        }
+        //bebebe
+
+        [HttpPost]
+        public async Task<IActionResult> CreateAlbum(string title, string genre, string author) {
+            var result = await _mediator.Send(new AddAlbumCommand(title, author, genre));
+            if (result.StatusCode == 200)
+            {
+                return Json(result.Data);
+            }
+            else return BadRequest(result.Description);
         }
 
         [HttpGet]

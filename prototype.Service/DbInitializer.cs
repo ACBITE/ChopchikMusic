@@ -10,35 +10,42 @@ namespace prototype.Service
         {
             var unitOfWork = services.GetRequiredService<IUnitOfWork>();
 
-            await unitOfWork.DeleteDataBaseAsync();
-            await unitOfWork.CreateDataBaseAsync();
-            //await unitOfWork.ConnectDataBaseAsync();
+            //await unitOfWork.DeleteDataBaseAsync();
+            //await unitOfWork.CreateDataBaseAsync();
+            await unitOfWork.ConnectDataBaseAsync();
+
+            //public User(string? name, string? email, string? password, string? role, string? path)
+            var user = new User("Три дня дождя", "prodalsya@gmail.com", "1234", "User", "Herman.jpg");
+            await unitOfWork.UserRepository.AddAsync(user);
+
             ///Add the users
-            var user = new User("Admin", "admin", "1234", "Admin", "Herman.jpg");
-            await unitOfWork.UserRepository.AddAsync(user);
+            //var user = new User("Admin", "admin", "1234", "Admin", "Herman.jpg");
+            //await unitOfWork.UserRepository.AddAsync(user);
 
-            user = new User("Rinat", "rinat@puk.puk", "1111", "User", "Herman.jpg");
-            await unitOfWork.UserRepository.AddAsync(user);
+            //user = new User("Rinat", "rinat@puk.puk", "1111", "User", "Herman.jpg");
+            //await unitOfWork.UserRepository.AddAsync(user);
 
-            var playlist = new Playlist("Test", "Herman.jpg", 2, user);
-            await unitOfWork.PlaylistRepository.AddAsync(playlist);
+            //var playlist = new Playlist("Test", "Herman.jpg", 2, user);
+            //await unitOfWork.PlaylistRepository.AddAsync(playlist);
 
-            var playlistUser = new PlaylistUser(2, user, 1, playlist);
-            await unitOfWork.PlaylistUserRepository.AddAsync(playlistUser);
+            //var playlistUser = new PlaylistUser(2, user, 1, playlist);
+            //await unitOfWork.PlaylistUserRepository.AddAsync(playlistUser);
+
+            //var genre = new Genre("Rock");
+            //await unitOfWork.GenreRepository.AddAsync(genre);
+
+            //var author = new User("Nirvana", "kurtKobbein@nevesa.bog", "dulo", "User", "Nirvana.jpg");
+            //await unitOfWork.UserRepository.AddAsync(author);
+
+            //var album = new Album("Nevermind", "Herman.jpg", 1, genre);
+            //await unitOfWork.AlbumRepository.AddAsync(album);
+
+            //var albumAuthor = new AlbumAuthor(1, album, 1, author);
+            //await unitOfWork.AlbumAuthorRepository.AddAsync(albumAuthor);
 
             ///========================================================Nevermind
 
-            /*var author = new User("Nirvana", "Nirvana.jpg");
-            await unitOfWork.AuthorRepository.AddAsync(author);
-
-            var genre = new Genre("Rock");
-            await unitOfWork.GenreRepository.AddAsync(genre);
-
-            var album = new Album("Nevermind", "Herman.jpg", 1, genre);
-            await unitOfWork.AlbumRepository.AddAsync(album);
-
-            var albumAuthor = new AlbumAuthor(1, album, 1, author);
-            await unitOfWork.AlbumAuthorRepository.AddAsync(albumAuthor);
+            /*
 
             var song = new Song("Smells like teen spirit", "Herman.jpg", "smellslike.mp3",1, album);
             await unitOfWork.SongRepository.AddAsync(song);
