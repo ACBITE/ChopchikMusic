@@ -1,7 +1,7 @@
 README.md
 
 Сущности:
-    1) User. Сущность пользователя. Имеет поля: _Id, _Name, _Email, _Password, _Role (0 - простой пользователь, 1 - автор, 2 - админ), _PathToImage (путь к аватарке), _FavouritePlaylistId - указать на айтишник плейлиста с любимыми песнями).
+    1) User. Сущность пользователя. Имеет поля: _Id, _Name, _Email, _Password, _Role (0 - простой пользователь, 1 - автор, 2 - админ), _PathToImage (путь к аватарке), _FavouritePlaylistId - указать на айдишник плейлиста с любимыми песнями).
     2) Song. Сущность песни. Имеет поля: _Id, _Name, _GenreId, _PathToImage, _PathToSong (путь к файлу самой песни).
     3) Playlist. Сущность плейлиста. Имеет поля: _Id, _Name, _PathToImage.
     4) Genre. Сущность жанра. Имеет поля: _Id, _Name.
